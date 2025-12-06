@@ -17,7 +17,7 @@ const Todo=({text,todo,todos, setTodos})=>{
         }
         return item;
      }))
-        toast.success('Task marked as done!')
+        toast.success('Task status updated!')
     }
 
     // const editHandler=()=>{
