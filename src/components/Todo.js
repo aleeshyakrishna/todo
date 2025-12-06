@@ -1,10 +1,11 @@
 import React from "react";
+import toast from "react-hot-toast";
 
 
 const Todo=({text,todo,todos, setTodos})=>{
     const deleteHandler=()=>{
         setTodos(todos.filter(el=> el.id !== todo.id))
-        console.log(todo);
+        toast.success('Task deleted!')
     }
 
     const completeHandler=()=>{
@@ -16,6 +17,7 @@ const Todo=({text,todo,todos, setTodos})=>{
         }
         return item;
      }))
+        toast.success('Task marked as done!')
     }
 
     // const editHandler=()=>{
